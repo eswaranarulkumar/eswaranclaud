@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <defs>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1322"/>
+      <stop offset="100%" stop-color="#04070f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="350" fill="url(#p)"/>
+  <g stroke="#f97316" stroke-opacity="0.35" fill="none">
+    <path d="M0 280 L160 200 L320 250 L480 140 L640 190 L800 90" stroke-width="2"/>
+    <path d="M0 320 L200 260 L400 300 L600 210 L800 250" stroke-opacity="0.15" stroke-width="1.5"/>
+  </g>
+  <circle cx="480" cy="140" r="6" fill="#f97316"/>
+  <circle cx="640" cy="190" r="4" fill="#22d3ee"/>
+  <text x="48" y="90" font-family="monospace" font-size="64" letter-spacing="8" fill="#f97316" fill-opacity="0.5">03</text>
+  <text x="48" y="310" font-family="monospace" font-size="22" letter-spacing="8" fill="#8b9bb4">VISUAL LAB</text>
+</svg>
