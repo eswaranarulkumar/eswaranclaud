@@ -28,6 +28,13 @@ export default function RootLayout({
         <div className="grid-bg" aria-hidden="true" />
         {children}
         <div className="noise-overlay" aria-hidden="true" />
+        {/* Fail-safe: if the intro/animations crash for any reason, force all
+            content visible after 5s so the page can never stay black. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `setTimeout(function(){try{var b=document.getElementById('boot-overlay');if(b)b.style.display='none';var h=document.querySelector('header');if(h&&getComputedStyle(h).opacity==='0'){document.querySelectorAll('[style]').forEach(function(el){var o=getComputedStyle(el).opacity;if(o==='0'){el.style.opacity='1';el.style.transform='none';}});}}catch(e){}},5000);`,
+          }}
+        />
       </body>
     </html>
   );
