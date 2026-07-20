@@ -1,17 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a1322"/>
-      <stop offset="100%" stop-color="#04070f"/>
-    </linearGradient>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#060c18"/><stop offset="1" stop-color="#04070f"/></linearGradient>
+    <radialGradient id="sphere" cx="0.38" cy="0.34" r="0.75"><stop offset="0" stop-color="#16233d"/><stop offset="0.7" stop-color="#0a1322"/><stop offset="1" stop-color="#04070f"/></radialGradient>
+    <radialGradient id="rim" cx="0.5" cy="0.5" r="0.5"><stop offset="0.78" stop-color="#22d3ee" stop-opacity="0"/><stop offset="0.92" stop-color="#22d3ee" stop-opacity="0.45"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+    <filter id="g2"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/></filter>
   </defs>
-  <rect width="800" height="350" fill="url(#p)"/>
-  <g stroke="#3b82f6" stroke-opacity="0.35" fill="none">
-    <path d="M0 280 L160 200 L320 250 L480 140 L640 190 L800 90" stroke-width="2"/>
-    <path d="M0 320 L200 260 L400 300 L600 210 L800 250" stroke-opacity="0.15" stroke-width="1.5"/>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <g fill="#dbeafe" opacity="0.5">
+    <circle cx="90" cy="70" r="1.4"/><circle cx="210" cy="40" r="1"/><circle cx="700" cy="90" r="1.4"/><circle cx="620" cy="50" r="1"/><circle cx="740" cy="200" r="1"/>
   </g>
-  <circle cx="480" cy="140" r="6" fill="#3b82f6"/>
-  <circle cx="640" cy="190" r="4" fill="#22d3ee"/>
-  <text x="48" y="90" font-family="monospace" font-size="64" letter-spacing="8" fill="#3b82f6" fill-opacity="0.5">02</text>
-  <text x="48" y="310" font-family="monospace" font-size="22" letter-spacing="8" fill="#8b9bb4">AI SYSTEMS</text>
+  <circle cx="400" cy="290" r="215" fill="url(#sphere)"/>
+  <circle cx="400" cy="290" r="215" fill="url(#rim)"/>
+  <g fill="#8be9ff" opacity="0.85">
+    <circle cx="330" cy="230" r="1.6"/><circle cx="352" cy="244" r="1.2"/><circle cx="376" cy="236" r="1.8"/><circle cx="398" cy="252" r="1.2"/>
+    <circle cx="430" cy="240" r="1.6"/><circle cx="452" cy="258" r="1.2"/><circle cx="470" cy="246" r="1.4"/>
+    <circle cx="340" cy="300" r="1.4"/><circle cx="368" cy="312" r="1.8"/><circle cx="404" cy="306" r="1.2"/><circle cx="440" cy="318" r="1.6"/>
+  </g>
+  <g stroke="#22d3ee" stroke-width="0.8" opacity="0.4" fill="none">
+    <path d="M330 230 L376 236 L430 240 L470 246"/><path d="M368 312 L404 306 L440 318"/><path d="M376 236 L368 312"/>
+  </g>
+  <ellipse cx="400" cy="290" rx="215" ry="215" fill="none" stroke="#22d3ee" stroke-opacity="0.12"/>
+  <rect width="800" height="500" filter="url(#g2)"/>
 </svg>
