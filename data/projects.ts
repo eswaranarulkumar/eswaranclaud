@@ -6,29 +6,32 @@ export type Project = {
   href: string;
 };
 
+// Bytt tittel, tag og beskrivelse her — kortene oppdateres automatisk.
+// Bildene ligger i public/posters/project_01.svg osv. og kan byttes til
+// egne .jpg/.png ved å endre filnavnene i components/Projects.tsx.
 export const projects: Project[] = [
   {
     index: "01",
-    title: "WEB EXPERIENCES",
-    tag: "NEXT.JS / MOTION / 3D",
+    title: "ARCHITECTURAL OS",
+    tag: "Digital Platform",
     description:
-      "High-performance sites and interactive experiences engineered for speed, story and conversion.",
+      "A modular digital platform engineered for scale — structured content, clean systems and effortless publishing.",
     href: "#contact",
   },
   {
     index: "02",
-    title: "AI SYSTEMS",
-    tag: "LLM / AUTOMATION / DATA",
+    title: "TERRA INSIGHTS",
+    tag: "Data Intelligence Platform",
     description:
-      "Intelligent assistants, content pipelines and automation that remove friction from real workflows.",
+      "Global data streams distilled into clear, actionable intelligence with real-time visual dashboards.",
     href: "#contact",
   },
   {
     index: "03",
-    title: "VISUAL LAB",
-    tag: "DESIGN / GENERATIVE / BRAND",
+    title: "LUXOR COMMERCE",
+    tag: "E-Commerce System",
     description:
-      "Exploratory design systems, generative identity work and cinematic visual language.",
+      "A high-performance commerce system built for conversion — fast, cinematic and friction-free.",
     href: "#contact",
   },
 ];
